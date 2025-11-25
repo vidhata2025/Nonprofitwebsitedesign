@@ -64,7 +64,7 @@ export function Contact() {
         {/* Contact Info */}
         <div className="mt-16 text-center space-y-3">
           <p className="text-sm text-gray-600">
-            Email: info@vidhata.org.np
+            Email: contact.vidhata@gmail.com
           </p>
           <p className="text-sm text-gray-600">
             Location: Kathmandu, Nepal

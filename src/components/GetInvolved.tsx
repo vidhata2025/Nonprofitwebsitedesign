@@ -7,7 +7,7 @@ export function GetInvolved() {
     {
       icon: Users,
       title: 'Become a Volunteer',
-      description: 'Join our community of 120+ passionate volunteers making a real difference in students\' lives.',
+      description: 'Join our community of 125+ passionate volunteers making a real difference in students\' lives.',
       cta: 'Apply to Volunteer',
       color: 'bg-[#5B8A8D]',
       hoverColor: 'hover:bg-[#4a7174]',
@@ -23,7 +23,7 @@ export function GetInvolved() {
     {
       icon: Building2,
       title: 'Partner With Us',
-      description: 'Join our network of 12+ partner organizations to create sustainable impact across Nepal.',
+      description: 'Join our network of 18 partner organizations to create sustainable impact across Nepal.',
       cta: 'Become a Partner',
       color: 'bg-[#F0C78A]',
       hoverColor: 'hover:bg-[#e0b77a]',
@@ -107,15 +107,15 @@ export function GetInvolved() {
                 <div className="text-sm">Hours of Learning Delivered</div>
               </div>
               <div className="bg-gradient-to-br from-[#EA8166] to-[#d97359] rounded-xl p-6 text-white text-center shadow-lg">
-                <div className="text-3xl mb-2">5000+</div>
+                <div className="text-3xl mb-2">5600+</div>
                 <div className="text-sm">Students Reached</div>
               </div>
               <div className="bg-gradient-to-br from-[#F0C78A] to-[#e0b77a] rounded-xl p-6 text-white text-center shadow-lg">
-                <div className="text-3xl mb-2">120+</div>
+                <div className="text-3xl mb-2">125+</div>
                 <div className="text-sm">Active Volunteers</div>
               </div>
               <div className="bg-gradient-to-br from-[#5B8A8D] to-[#4a7174] rounded-xl p-6 text-white text-center shadow-lg">
-                <div className="text-3xl mb-2">12+</div>
+                <div className="text-3xl mb-2">18</div>
                 <div className="text-sm">Partner Organizations</div>
               </div>
             </div>

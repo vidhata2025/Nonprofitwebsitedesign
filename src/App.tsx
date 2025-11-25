@@ -1,5 +1,6 @@
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
+import { ImpactMetrics } from './components/ImpactMetrics';
 import { About } from './components/About';
 import { Partners } from './components/Partners';
 import { Programs } from './components/Programs';
@@ -14,7 +15,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <Hero />
+      <div className="relative">
+        <Hero />
+        <ImpactMetrics />
+      </div>
       <About />
       <Partners />
       <Programs />

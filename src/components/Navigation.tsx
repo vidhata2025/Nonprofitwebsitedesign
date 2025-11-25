@@ -10,9 +10,9 @@ export function Navigation() {
     { label: 'Home', href: '#home' },
     { label: 'About Us', href: '#about' },
     { label: 'Programs', href: '#programs' },
-    { label: 'Get Involved', href: '#get-involved' },
     { label: 'Our Team', href: '#team' },
     { label: 'Contact', href: '#contact' },
+    { label: 'Join Us', href: '#get-involved' },
   ];
 
   return (
@@ -27,7 +27,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.slice(0, -1).map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -36,6 +36,13 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={navItems[navItems.length - 1].href}
+              className="bg-[#5B8A8D] hover:bg-[#4a7174] text-white px-6 py-2 transition-colors"
+              style={{ borderRadius: '9px' }}
+            >
+              {navItems[navItems.length - 1].label}
+            </a>
           </div>
 
           {/* Mobile menu button */}

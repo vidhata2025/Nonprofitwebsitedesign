@@ -1,4 +1,15 @@
+import vidhataLogo from 'figma:asset/25b3cb45a9ea19bb8f252c76e5550f3008379dad.png';
+import artbeatLogo from 'figma:asset/88fe25acdff6dffd9668a3bfce01908d6c6da995.png';
+import ofgLogo from 'figma:asset/a78b1046baa5257398ec4644b64ece3ddaa0fd4c.png';
+
 export function Partners() {
+  // Featured partners with logos
+  const featuredPartners = [
+    { name: 'Vidhata', logo: vidhataLogo },
+    { name: 'ArtBeat Nepal', logo: artbeatLogo },
+    { name: 'OFG Nepal', logo: ofgLogo },
+  ];
+
   // Placeholder partner names - replace with actual partner organizations
   const partners = [
     'Nepal Education Foundation',
@@ -13,6 +24,9 @@ export function Partners() {
     'Future Leaders Academy',
     'Knowledge Bridge Foundation',
     'Hope & Education Society',
+    'Innovation Hub Nepal',
+    'Creative Arts Foundation',
+    'Social Impact Collective',
   ];
 
   return (
@@ -24,8 +38,29 @@ export function Partners() {
             Trusted by Leading Organizations
           </h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We collaborate with 12 partner organizations across Nepal to maximize our impact
+            We collaborate with 18 partner organizations across Nepal to maximize our impact
           </p>
+        </div>
+      </div>
+
+      {/* Featured Partners with Logos */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="flex justify-center items-center gap-12 flex-wrap">
+          {featuredPartners.map((partner) => (
+            <div
+              key={partner.name}
+              className="flex flex-col items-center group"
+            >
+              <div className="w-32 h-32 rounded-full overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 p-4 flex items-center justify-center group-hover:scale-110">
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="text-gray-800 mt-4 text-center">{partner.name}</p>
+            </div>
+          ))}
         </div>
       </div>
 
