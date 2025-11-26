@@ -1,15 +1,16 @@
-import { Navigation } from './components/Navigation';
-import { Hero } from './components/Hero';
-import { ImpactMetrics } from './components/ImpactMetrics';
-import { About } from './components/About';
-import { Partners } from './components/Partners';
-import { Programs } from './components/Programs';
-import { WorkInAction } from './components/WorkInAction';
-import { GetInvolved } from './components/GetInvolved';
-import { VolunteerTrajectory } from './components/VolunteerTrajectory';
-import { Team } from './components/Team';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import React from "react";
+import { Navigation } from "./components/Navigation";
+import { Hero } from "./components/Hero";
+import { ImpactMetrics } from "./components/ImpactMetrics";
+import { About } from "./components/About";
+import { Partners } from "./components/Partners";
+import { Programs } from "./components/Programs";
+import { WorkInAction } from "./components/WorkInAction";
+import { GetInvolved } from "./components/GetInvolved";
+import { VolunteerTrajectory } from "./components/VolunteerTrajectory";
+import { Team } from "./components/Team";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (

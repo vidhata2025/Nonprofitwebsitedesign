@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "figma:asset/f2dddff10fce8c5cc0468d3c13d16d6eeadcbdb7.png";
+import logoImage from "figma:asset/25b3cb45a9ea19bb8f252c76e5550f3008379dad.png";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +21,8 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img
-              src="/img/"
-              alt="Vidhata Logo"
-              className="h-14 w-14"
-            />
-            <span className="text-2xl text-[#5B8A8D]">
-              Vidhata
-            </span>
+            <img src={logoImage} alt="Vidhata Logo" className="h-14 w-14" />
+            <span className="text-2xl text-[#5B8A8D]">Vidhata</span>
           </div>
 
           {/* Desktop Navigation */}
