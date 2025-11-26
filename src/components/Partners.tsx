@@ -1,16 +1,6 @@
-import vidhataLogo from 'figma:asset/25b3cb45a9ea19bb8f252c76e5550f3008379dad.png';
-import artbeatLogo from 'figma:asset/88fe25acdff6dffd9668a3bfce01908d6c6da995.png';
-import ofgLogo from 'figma:asset/a78b1046baa5257398ec4644b64ece3ddaa0fd4c.png';
-
 export function Partners() {
-  // Featured partners with logos
-  const featuredPartners = [
-    { name: 'Vidhata', logo: vidhataLogo },
-    { name: 'ArtBeat Nepal', logo: artbeatLogo },
-    { name: 'OFG Nepal', logo: ofgLogo },
-  ];
 
-  // Placeholder partner names - replace with actual partner organizations
+  // Partner names - unchanged
   const partners = [
     'Nepal Education Foundation',
     'Teach For Nepal',
@@ -43,33 +33,14 @@ export function Partners() {
         </div>
       </div>
 
-      {/* Featured Partners with Logos */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="flex justify-center items-center gap-12 flex-wrap">
-          {featuredPartners.map((partner) => (
-            <div
-              key={partner.name}
-              className="flex flex-col items-center group"
-            >
-              <div className="w-32 h-32 rounded-full overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 p-4 flex items-center justify-center group-hover:scale-110">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <p className="text-gray-800 mt-4 text-center">{partner.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Removed: Featured partner logos section */}
 
       {/* Auto-scrolling logos container */}
       <div className="relative">
         {/* Gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F0F9F9] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F0F9F9] to-transparent z-10" />
-        
+
         {/* Scrolling content - duplicated for seamless loop */}
         <div className="flex animate-scroll">
           {/* First set */}
@@ -86,6 +57,7 @@ export function Partners() {
               </div>
             </div>
           ))}
+
           {/* Duplicate set for seamless loop */}
           {partners.map((partner, index) => (
             <div
@@ -112,11 +84,11 @@ export function Partners() {
             transform: translateX(-50%);
           }
         }
-        
+
         .animate-scroll {
           animation: scroll 40s linear infinite;
         }
-        
+
         .animate-scroll:hover {
           animation-play-state: paused;
         }
