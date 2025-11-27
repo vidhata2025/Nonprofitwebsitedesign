@@ -1,20 +1,27 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Heart } from 'lucide-react';
-import logoImage from 'figma:asset/25b3cb45a9ea19bb8f252c76e5550f3008379dad.png';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Heart,
+} from "lucide-react";
+import logoImage from "/images/vidhata_logo.png";
 
 export function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
 
   const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Programs', href: '#programs' },
-    { label: 'Get Involved', href: '#get-involved' },
-    { label: 'Contact', href: '#contact' },
+    { label: "Home", href: "#home" },
+    { label: "About Us", href: "#about" },
+    { label: "Programs", href: "#programs" },
+    { label: "Get Involved", href: "#get-involved" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -28,8 +35,9 @@ export function Footer() {
               <span className="text-2xl">Vidhata</span>
             </div>
             <p className="text-white/90 mb-4 max-w-md">
-              Empowering underserved students across Nepal through structured non-academic 
-              learning that fosters holistic development and creates lasting impact.
+              Empowering underserved students across Nepal through structured
+              non-academic learning that fosters holistic development and
+              creates lasting impact.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => {
@@ -54,8 +62,8 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
-                    href={link.href} 
+                  <a
+                    href={link.href}
                     className="text-white/80 hover:text-[#F0C78A] transition-colors"
                   >
                     {link.label}
@@ -69,7 +77,8 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-lg">Stay Updated</h5>
             <p className="text-white/80 mb-4 text-sm">
-              Subscribe to our newsletter for updates on our programs and impact.
+              Subscribe to our newsletter for updates on our programs and
+              impact.
             </p>
             <div className="flex">
               <input
@@ -90,7 +99,8 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Vidhata. All rights reserved.
           </p>
           <p className="text-white/80 text-sm flex items-center">
-            Made with <Heart className="h-4 w-4 mx-1 text-[#EA8166]" /> for students across Nepal
+            Made with <Heart className="h-4 w-4 mx-1 text-[#EA8166]" /> for
+            students across Nepal
           </p>
         </div>
       </div>

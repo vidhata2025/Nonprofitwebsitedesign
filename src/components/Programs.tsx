@@ -1,54 +1,73 @@
-import { BookOpen, Palette, Music, Lightbulb, Globe, Heart } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import lifeSkillsImage from 'figma:asset/137e77811a60455090ac96233bf504906334ad44.png';
-import creativeArtsImage from 'figma:asset/2c337d1592dceac6ec412dd6a74a0a17437301e7.png';
-import musicPerformanceImage from 'figma:asset/84be3ae0e40f1a2d3082695e11edb7059b99ee12.png';
-import innovationTechImage from 'figma:asset/1f2d393ac20905fec8608561a34fe29a85a8c417.png';
-import environmentalImage from 'figma:asset/7dc15c8e1073288708202041b0a2b421768b8252.png';
-import socialEmotionalImage from 'figma:asset/ccf5785eb7d49d3a1156d81c2ef317286c7dbbe0.png';
+import {
+  BookOpen,
+  Palette,
+  Music,
+  Lightbulb,
+  Globe,
+  Heart,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import lifeSkillsImage from "/images/holistic_development.jpg";
+import creativeArtsImage from "/images/creative_arts.png";
+import musicPerformanceImage from "/images/music_and_performance.jpg";
+import innovationTechImage from "/images/innovation_and_technology.jpg";
+import environmentalImage from "/images/environmental_awareness.png";
+import socialEmotionalImage from "/images/underserved.jpg";
 
 export function Programs() {
   const programs = [
     {
       icon: BookOpen,
-      title: 'Life Skills Education',
-      description: 'Teaching essential skills like critical thinking, communication, and problem-solving that empower students beyond the classroom.',
-      color: 'from-[#5B8A8D] to-[#4a7174]',
+      title: "Life Skills Education",
+      description:
+        "Teaching essential skills like critical thinking, communication, and problem-solving that empower students beyond the classroom.",
+      color: "from-[#5B8A8D] to-[#4a7174]",
       image: lifeSkillsImage,
     },
     {
       icon: Palette,
-      title: 'Creative Arts',
-      description: 'Fostering creativity through art, crafts, and design workshops that help students express themselves and discover their talents.',
-      color: 'from-[#EA8166] to-[#d97359]',
+      title: "Creative Arts",
+      description:
+        "Fostering creativity through art, crafts, and design workshops that help students express themselves and discover their talents.",
+      color: "from-[#EA8166] to-[#d97359]",
       image: creativeArtsImage,
     },
     {
       icon: Music,
-      title: 'Music & Performance',
-      description: 'Building confidence and teamwork through music, dance, and drama activities that celebrate cultural expression.',
-      color: 'from-[#F0C78A] to-[#e0b77a]',
+      title: "Music & Performance",
+      description:
+        "Building confidence and teamwork through music, dance, and drama activities that celebrate cultural expression.",
+      color: "from-[#F0C78A] to-[#e0b77a]",
       image: musicPerformanceImage,
     },
     {
       icon: Lightbulb,
-      title: 'Innovation & Technology',
-      description: 'Introducing students to technology, coding, and innovative thinking to prepare them for the digital future.',
-      color: 'from-[#5B8A8D] to-[#4a7174]',
+      title: "Innovation & Technology",
+      description:
+        "Introducing students to technology, coding, and innovative thinking to prepare them for the digital future.",
+      color: "from-[#5B8A8D] to-[#4a7174]",
       image: innovationTechImage,
     },
     {
       icon: Globe,
-      title: 'Environmental Awareness',
-      description: 'Educating students about environmental conservation and sustainable practices for a better tomorrow.',
-      color: 'from-[#EA8166] to-[#d97359]',
+      title: "Environmental Awareness",
+      description:
+        "Educating students about environmental conservation and sustainable practices for a better tomorrow.",
+      color: "from-[#EA8166] to-[#d97359]",
       image: environmentalImage,
     },
     {
       icon: Heart,
-      title: 'Social Emotional Learning',
-      description: 'Developing emotional intelligence, empathy, and interpersonal skills for healthy relationships and well-being.',
-      color: 'from-[#F0C78A] to-[#e0b77a]',
+      title: "Social Emotional Learning",
+      description:
+        "Developing emotional intelligence, empathy, and interpersonal skills for healthy relationships and well-being.",
+      color: "from-[#F0C78A] to-[#e0b77a]",
       image: socialEmotionalImage,
     },
   ];
@@ -58,13 +77,16 @@ export function Programs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[#5B8A8D] text-lg mb-3 tracking-wide">OUR PROGRAMS</h2>
+          <h2 className="text-[#5B8A8D] text-lg mb-3 tracking-wide">
+            OUR PROGRAMS
+          </h2>
           <h3 className="text-4xl sm:text-5xl text-gray-900 mb-6">
             Comprehensive Learning Experiences
           </h3>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Our diverse programs are designed to nurture every aspect of student development, 
-            from creativity and innovation to emotional intelligence and social responsibility.
+            Our diverse programs are designed to nurture every aspect of student
+            development, from creativity and innovation to emotional
+            intelligence and social responsibility.
           </p>
         </div>
 
@@ -73,25 +95,27 @@ export function Programs() {
           {programs.map((program) => {
             const Icon = program.icon;
             return (
-              <Card 
-                key={program.title} 
+              <Card
+                key={program.title}
                 className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50 overflow-hidden"
               >
                 {/* Image Section (if available) */}
                 {program.image && (
                   <div className="relative w-full aspect-square overflow-hidden">
-                    <img 
-                      src={program.image} 
+                    <img
+                      src={program.image}
                       alt={program.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
                 )}
-                
+
                 <CardHeader className="pb-4">
                   {!program.image && (
-                    <div className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}
+                    >
                       <Icon className="h-8 w-8 text-white" />
                     </div>
                   )}
@@ -103,7 +127,9 @@ export function Programs() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className={`h-1 w-0 group-hover:w-full bg-gradient-to-r ${program.color} transition-all duration-500 rounded-full`} />
+                  <div
+                    className={`h-1 w-0 group-hover:w-full bg-gradient-to-r ${program.color} transition-all duration-500 rounded-full`}
+                  />
                 </CardContent>
               </Card>
             );
@@ -113,7 +139,8 @@ export function Programs() {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <p className="text-gray-700 text-lg mb-6">
-            Want to learn more about our programs or bring them to your community?
+            Want to learn more about our programs or bring them to your
+            community?
           </p>
           <button className="bg-[#EA8166] hover:bg-[#d97359] text-white px-8 py-4 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl">
             Explore Our Programs

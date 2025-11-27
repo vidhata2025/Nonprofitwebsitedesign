@@ -92,3 +92,7 @@ For a React + Vite project, **Vercel is the easiest and best option** because:
 
 Just connect your GitHub repo and you're done! 🚀
 
+
+
+
+
